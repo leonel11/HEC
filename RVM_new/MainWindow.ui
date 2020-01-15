@@ -1,0 +1,1586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>812</width>
+    <height>590</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>HEC - heat exchanger calculator. Расчет теплообменника</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>391</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>По холодной стороне теплоносителя</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>300</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>кв.м</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Массовый расход:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="LGdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>210</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>7</number>
+     </property>
+     <property name="maximum">
+      <double>9.999000000000001</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.030000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>30</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>кг/с</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>150</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>шт</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>210</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>м</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Число эл-тов в пакете:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>210</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Длина хода в межтруб. ячейке:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Темп. на вх.:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>90</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>кг/кв.м</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="DEGdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>120</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>7</number>
+     </property>
+     <property name="maximum">
+      <double>9.999000000000001</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.003200000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="GGdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>30</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>999.999000000000024</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>2.500000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>240</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>кв.м</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Абсолют. давл. на вх.:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>180</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>шт</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Число усл. межтруб. каналов в 1-ом эл-те:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>60</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>град. C</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>300</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Площадь пов-ти усл. канала без ребер:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="NKYspinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>180</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+     <property name="value">
+      <number>18</number>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="SGdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>240</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>6</number>
+     </property>
+     <property name="maximum">
+      <double>999.990000000000009</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.000033000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>270</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Полная площадь пов-ти межтруб. канала:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>120</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>м</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>270</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>кв.м</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="NEGspinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>150</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+     <property name="value">
+      <number>14</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="PGspinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>90</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>9999999</number>
+     </property>
+     <property name="value">
+      <number>50000</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>240</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Площадь сечения усл. межтруб. канала:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="FGdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>270</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>6</number>
+     </property>
+     <property name="maximum">
+      <double>999.990000000000009</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.000725000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="FEGdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>300</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>6</number>
+     </property>
+     <property name="maximum">
+      <double>999.990000000000009</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.000655000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Гидравл. диаметр межтруб. канала:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="TGdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>60</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>9999.989999999999782</double>
+     </property>
+     <property name="value">
+      <double>75.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_50">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>330</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Коэф. для трубч. круглого сечения:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="MGdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>330</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>По умолчанию: 0,43</string>
+     </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.430000000000000</double>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>391</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>По горячей стороне теплоносителя</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Массовый расход:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="LBdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>210</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>9.999000000000001</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.010000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>32</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>кг/с</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_24">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>150</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>шт</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_25">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>210</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>м</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_26">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Число эл-тов в пакете:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_27">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>210</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Длина хода газа в трубч. ячейке:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_28">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Темп. на вх.:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_29">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>90</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>кг/кв.м</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="DEBdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>120</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>7</number>
+     </property>
+     <property name="maximum">
+      <double>999.999000000000024</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.008500000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="GBdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>30</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>9999.998999999999796</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.310000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_30">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>240</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>кв.м</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_31">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Абсолют. давл. на вх.:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_32">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>180</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>шт</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_33">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Число трубч. каналов в 1-ом эл-те:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_34">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>60</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>град. C</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="NKEspinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>180</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+     <property name="value">
+      <number>5</number>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="SBdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>240</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>6</number>
+     </property>
+     <property name="maximum">
+      <double>999.990000000000009</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.000136000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_36">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>270</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Площадь пов-ти трубч. ячейки:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_37">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>120</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>м</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_38">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>270</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>кв.м</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="NEBspinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>150</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+     <property name="value">
+      <number>14</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="PBspinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>90</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>999999</number>
+     </property>
+     <property name="value">
+      <number>10500</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_39">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>240</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Площадь сечения трубч. канала:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="FBdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>270</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>7</number>
+     </property>
+     <property name="maximum">
+      <double>999.990000000000009</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.000645000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_40">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Гидравл. диаметр трубч. канала:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="TBdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>60</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>99999.990000000005239</double>
+     </property>
+     <property name="value">
+      <double>280.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_51">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>300</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Коэф. для трубч. круглого сечения:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="MBdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>300</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>По умолчанию: 0,43</string>
+     </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.430000000000000</double>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>350</y>
+      <width>391</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <italic>false</italic>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="title">
+     <string>Общие данные</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QLabel" name="label_35">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Масса трубч. ячейки без ребер:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_41">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>32</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>кг</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_42">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>150</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>м</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_44">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1/4 периметра межтруб. канала:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_46">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Толщина стенки гофрированной пластины:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_47">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>90</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>м</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="MEdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>30</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>7</number>
+     </property>
+     <property name="maximum">
+      <double>9.999000000000001</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.001500000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_49">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Высота ребра:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_52">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>60</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>м</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_54">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>120</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>м</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_57">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Относительная высота ребра:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="BETACTdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>60</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>7</number>
+     </property>
+     <property name="maximum">
+      <double>9.999000000000001</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.000300000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="HPGdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>90</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>7</number>
+     </property>
+     <property name="maximum">
+      <double>9.999000000000001</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.001740000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="FPGdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>120</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>7</number>
+     </property>
+     <property name="maximum">
+      <double>9.999000000000001</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.100000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="HNdoubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>150</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>7</number>
+     </property>
+     <property name="maximum">
+      <double>9.999000000000001</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.016000000000000</double>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>261</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Среда теплоносителей</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>По хол. стор.:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_43">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>По гор. стор.:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="CPED1comboBox">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>30</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="currentText">
+      <string>Вода</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>Воздух</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Вода</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Масло</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Дым. газ</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="CPED2comboBox">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>60</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Воздух</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Вода</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Масло</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Дым. газ</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_45">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Материал эл-тов:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="MATEPcomboBox">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>90</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Сталь 12х18н10т</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Алюминий</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Сталь углеродная</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="runCalculationsButton">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>540</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Показать результаты расчета теплообменника</string>
+    </property>
+    <property name="text">
+     <string>Результаты расчетов</string>
+    </property>
+    <property name="shortcut">
+     <string>F5</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openFileButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>540</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Считать входные данные из файла</string>
+    </property>
+    <property name="text">
+     <string>Считать данные из файла</string>
+    </property>
+    <property name="shortcut">
+     <string>Ctrl+O</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveInputDataButton">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>540</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Сохранить входные данные в файл</string>
+    </property>
+    <property name="text">
+     <string>Сохранить входные данные</string>
+    </property>
+    <property name="shortcut">
+     <string>Ctrl+S</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="FeaturesGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>380</y>
+      <width>121</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Расчет</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QRadioButton" name="OnePassRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>1 проход по газу и 1 проход по воде</string>
+     </property>
+     <property name="text">
+      <string>1 проход</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="TwoPassRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>2 прохода по газу и 2 прохода по воде</string>
+     </property>
+     <property name="text">
+      <string>2 прохода</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <action name="actionOpenFile">
+   <property name="text">
+    <string>Открыть файл</string>
+   </property>
+   <property name="toolTip">
+    <string>Открыть файл с начальными данными</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSaveInput">
+   <property name="text">
+    <string>Сохранить исходные данные</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранить исходные данные</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionCalculate">
+   <property name="text">
+    <string>Результаты расчетов</string>
+   </property>
+   <property name="toolTip">
+    <string>Показать результаты расчетов</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
